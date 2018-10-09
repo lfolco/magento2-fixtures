@@ -212,7 +212,7 @@ class ProductBuilder
 
     public function build() : ProductInterface
     {
-        FulltextIndex::ensureTablesAreCreated();
+        //FulltextIndex::ensureTablesAreCreated();
         $builder = clone $this;
         if (!$builder->product->getSku()) {
             $builder->product->setSku(sha1(uniqid('', true)));
